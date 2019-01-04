@@ -264,6 +264,7 @@ function SkipURL ($url)
         {           
             if (substr ($url, 0, strlen ($v)) == $v) return true; // Skip this URL
             if (strpos($url, '#') !== false) return true; // Skip this URL isset '#'
+            if (strpos($url, '&amp;') !== false) return true; // Skip this URL isset '&amp;'
             // if (isset('#',$url)) return true; // Skip this URL
         }
     }
